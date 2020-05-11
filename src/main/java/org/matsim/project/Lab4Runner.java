@@ -7,11 +7,10 @@ import org.matsim.core.controler.Controler;
 import org.matsim.core.controler.OutputDirectoryHierarchy;
 import org.matsim.core.scenario.ScenarioUtils;
 
-public class Exercise {
+public class Lab4Runner {
     public static void main(String[] args) {
         Config config = ConfigUtils.loadConfig("scenarios/equil/config.xml");
 
-        config.controler().setLastIteration(5);
         config.controler().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.deleteDirectoryIfExists);
 
         Scenario scenario = ScenarioUtils.loadScenario(config) ;
