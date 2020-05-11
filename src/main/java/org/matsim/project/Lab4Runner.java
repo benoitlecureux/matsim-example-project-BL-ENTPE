@@ -17,6 +17,10 @@ public class Lab4Runner {
 
         Controler controler = new Controler( scenario ) ;
 
+        //Console print of departure events
+
+
+
         controler.run();
 
         config.controler().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.deleteDirectoryIfExists);
