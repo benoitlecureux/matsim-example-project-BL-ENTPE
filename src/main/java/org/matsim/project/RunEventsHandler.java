@@ -8,7 +8,7 @@ public class RunEventsHandler {
 
     public static void main(String[] args) {
 
-        String inputFile = "output/output_events.xml.gz";
+        String inputFile = "output_BASE/output_events.xml.gz";
 
         EventsManager eventsManager = EventsUtils.createEventsManager();
 
@@ -17,5 +17,7 @@ public class RunEventsHandler {
 
         MatsimEventsReader eventsReader = new MatsimEventsReader(eventsManager);
         eventsReader.readFile(inputFile);
+
+
     }
 }
