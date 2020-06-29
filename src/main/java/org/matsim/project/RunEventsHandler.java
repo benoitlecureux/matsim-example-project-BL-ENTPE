@@ -6,7 +6,7 @@ import org.matsim.core.events.MatsimEventsReader;
 
 public class RunEventsHandler {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         String inputFile = "output_BASE/output_events.xml.gz";
 
@@ -19,5 +19,21 @@ public class RunEventsHandler {
         eventsReader.readFile(inputFile);
 
 
+    }*/
+    public static void main(String[] args) {
+
+        String inputFile = "output-reduced/output_events.xml.gz";
+        String outputFile = "output-reduced/Link6volumes.txt";
+
+        EventsManager eventsManager = EventsUtils.createEventsManager();
+
+        SimpleLinkEventHandler linkEventHandler = new SimpleLinkEventHandler(outputFile);
+        eventsManager.addHandler(linkEventHandler);
+
+        MatsimEventsReader eventsReader = new MatsimEventsReader(eventsManager);
+        eventsReader.readFile(inputFile);
+
+        linkEventHandler.printResult(); // print the results ;
     }
+
 }
